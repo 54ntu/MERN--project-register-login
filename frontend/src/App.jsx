@@ -1,10 +1,11 @@
 import './App.css'
+import Register from './components/register'
 
 function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-mono underline">hello</h1>
+    <Register/>
     </>
   )
 }
