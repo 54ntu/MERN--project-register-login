@@ -1,8 +1,13 @@
 require('dotenv').config();
 const express = require('express');
 const { connectdb } = require('./db/db');
+const { router } = require('./routes/auth-routes');
 const app = express();
 
+
+app.use(express.json());
+
+app.use('/api/v1',router);
 
 connectdb() //loading database connection file into the main file
 .then(()=>{
